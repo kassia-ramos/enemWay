@@ -38,13 +38,13 @@ Com o objetivo do projeto apresentado, é importante destacar como o sistema dev
 | RF-03 | Sites oficiais | O site deve apresentar os sites oficiais de cada processo, além do site unificado do governo para inscrições. | O |
 | RF-04 | Cadastro de usuários | O site deve permitir o cadastro de usuários por meio de um formulário com nome, e-mail e senha. | O |
 | RF-05 | Login | O site deve permitir login com e-mail e senha. | O |
-| RF-06 | Logout | O site deve permitir que o usuário realize logout sempre que desejar. | I |
+| RF-06 | Logout | O site deve permitir que o usuário realize logout sempre que desejar. |  I |
 | RF-07 | Manter dados cadastrais | O sistema deve manter dados do usuário e simulações armazenados no banco de dados. | O |
-| RF-08 | Atualizar cadastro | O usuário poderá atualizar seus dados no "gerenciamento de perfil". | I |
+| RF-08 | Atualizar cadastro | O usuário poderá atualizar seus dados no "gerenciamento de perfil". |  I |
 | RF-09 | Inserção de notas do ENEM | O usuário poderá inserir suas notas por área de conhecimento através de formulário. | O |
 | RF-10 | Simulador de notas | O site deve ter um simulador que calcula as chances de aprovação com base nas notas de corte. | O |
 | RF-11 | Pontuações variadas | O simulador deve permitir simular diferentes cursos considerando pesos e notas de corte. | O |
-| RF-12 | Alertas de prazos | O sistema deve exibir alertas sobre datas importantes como prova e inscrições. | I |
+| RF-12 | Alertas de prazos | O sistema deve exibir alertas sobre datas importantes como prova e inscrições. |  I |
 
 ---
 
