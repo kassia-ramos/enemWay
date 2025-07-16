@@ -166,7 +166,7 @@ nav a:hover {
   color: #3498db;
 }
 
-/* Features Section - renomeado do protótipo original */
+
 .features {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -242,8 +242,10 @@ nav a:hover {
 }
 
 .calendar-day.event {
-  background-color: #3498db;
-  color: white;
+  background-color: #1f6bae;
+  border: 2px solid #1f6bae;
+  font-weight: bold;
+  cursor: help;
 }
 
 /* Footer */

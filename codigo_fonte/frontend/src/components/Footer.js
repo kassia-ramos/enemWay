@@ -6,16 +6,9 @@ function Footer() {
   return (
     <footer>
       <div className="container footer-content">
-        <div className="footer-section">
-          <h3>Navegação</h3>
-          <Link to="/">Início</Link>
-          <Link to="/informacoes">Programas</Link>
-          <Link to="/calendario">Calendário</Link>
-          <Link to="/simulador">Simulador</Link>
-        </div>
 
         <div className="footer-section">
-          <h3>Recursos</h3>
+          <h3>Exames</h3>
           <Link to="/enem">ENEM</Link>
           <Link to="/sisu">SISU</Link>
           <Link to="/prouni">PROUNI</Link>
@@ -25,8 +18,7 @@ function Footer() {
         <div className="footer-section">
           <h3>Contato</h3>
           <Link to="/contato">Fale Conosco</Link>
-          <Link to="/faq">Perguntas Frequentes</Link>
-          <Link to="/suporte">Suporte</Link>
+          <Link to="/contato">Suporte</Link>
         </div>
       </div>
       <div className="copyright container">

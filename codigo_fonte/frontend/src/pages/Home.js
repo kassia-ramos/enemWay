@@ -11,9 +11,8 @@ function Home() {
       <div className="hero" id= "inicio">
         <div className="container">
           <h1>Planeje seu futuro acadêmico</h1>
-          <p>O EnemWay te ajuda a entender suas chances de aprovação em universidades com base nas suas notas do ENEM.</p>
-          <p>Faça seu Cadastro e teste nosso simulador!</p>
-          <Link to="/Simulacoes" className="btn btn-primary">Simular Agora</Link>
+          <p>O EnemWay te ajuda a entender suas chances de aprovação em universidades com base nas suas notas do ENEM. Faça seu Cadastro e teste nosso simulador!</p>
+          <Link to="/simulacoes" className="btn btn-primary">Simular Agora</Link>
         </div>
       </div>
       
@@ -51,9 +50,9 @@ function Home() {
           </div>
         </div>
         
-        {/* Calendario*/}
+        {/* Calendario */}
         <div className="card" id="calendario">
-          <h2 className="card-title">Calendário de Eventos</h2>
+          <h2 className="card-title">Calendário de Julho 2025</h2>
           <div className="card-content">
             <div className="calendar-header">
               <div>Dom</div>
@@ -65,32 +64,45 @@ function Home() {
               <div>Sáb</div>
             </div>
             <div className="calendar">
-              {[...Array(31)].map((_, i) => (
-                <div 
-                  key={i} 
-                  className={`calendar-day ${[11, 12, 13, 14].includes(i + 1) ? 'event' : ''}`}
-                  title={[11, 12, 13, 14].includes(i + 1) ? 'Inscrições ENEM' : ''}
-                >
-                  {i + 1}
-                </div>
+              {[
+                '', 1, 2, 3, 4, 5, 
+                6, 7, 8, 9, 10, 11, 12,
+                13, 14, 15, 16, 17, 18, 19,
+                20, 21, 22, 23, 24, 25, 26,
+                27, 28, 29, 30, 31
+              ].map((day, i) => (
+
+              <div 
+                key={i}
+                className={`calendar-day ${[10, 15, 25].includes(day) ? 'event' : ''}`}
+                title={
+                day === 10 ? 'Resultado da isenção do ENEM' :
+                day === 15 ? 'Início da preparação intensiva' :
+                day === 25 ? 'Lembrete: confira materiais de estudo' :
+                ''
+                }
+              >
+                {day}
+              </div>
               ))}
             </div>
           </div>
           <div style={{ marginTop: '20px' }}>
-            <h3>Próximos eventos:</h3>
+            <h3>Eventos de Julho:</h3>
             <ul style={{ listStyleType: 'none', marginTop: '10px' }}>
               <li style={{ marginBottom: '8px' }}>
-                <span style={{ color: '#3498db', fontWeight: 'bold' }}>11/05 - 14/05:</span> Período de inscrições para o ENEM 2025
+                <span style={{ color: '#3498db', fontWeight: 'bold' }}>10/07:</span> Resultado do pedido de isenção da taxa de inscrição
               </li>
               <li style={{ marginBottom: '8px' }}>
-                <span style={{ color: '#3498db', fontWeight: 'bold' }}>20/05 - 30/05:</span> Prazo para pagamento da taxa de inscrição
+                <span style={{ color: '#3498db', fontWeight: 'bold' }}>15/07:</span> Início das revisões intensivas para o ENEM
               </li>
               <li style={{ marginBottom: '8px' }}>
-                <span style={{ color: '#3498db', fontWeight: 'bold' }}>03/06 - 09/06:</span> Período para solicitação de atendimento especializado
+                <span style={{ color: '#3498db', fontWeight: 'bold' }}>25/07:</span> EnemWay recomenda revisar provas anteriores
               </li>
             </ul>
           </div>
         </div>
+
       </div>
     </div>
   );

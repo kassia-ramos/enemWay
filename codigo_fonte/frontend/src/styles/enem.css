@@ -1,0 +1,26 @@
+body {
+  background-color: #f5f5f5;
+  color: #333;
+  line-height: 1.6;
+}
+
+.enem-container {
+    background-color: #f5f5f5;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    padding: 50px;
+    transition: transform 0.3s;
+    
+}
+
+h1,h2{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-top: 20px ;
+    
+}
+p, ul{
+    text-align: justify;
+    font-size: 18px;
+    margin-top: 10px ;
+
+}
