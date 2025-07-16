@@ -14,19 +14,32 @@ function Login() {
     e.preventDefault();
 
     try {
+      // Primeiro, faz a requisição para obter os tokens
       const response = await api.post('/token/', {
-        username: username, // <-- usa username como esperado pelo backend
+        username: username, // usa username como esperado pelo backend
         password: senha,
       });
 
       const { access, refresh } = response.data;
 
-      // Salvar os tokens localmente
+      // Salva os tokens localmente
       localStorage.setItem('accessToken', access);
       localStorage.setItem('refreshToken', refresh);
 
-      // Redirecionar após login
-      navigate('/simulacoes');
+      // Agora, faz requisição autenticada para pegar os dados do usuário
+      const userResponse = await api.get('/usuarios/me/', {
+        headers: {
+          Authorization: `Bearer ${access}`, // passa o token no header Authorization
+        },
+      });
+
+      const userData = userResponse.data;
+
+      // Salva o nome de usuário (username) no localStorage para usar no dashboard
+      localStorage.setItem('username', userData.username);
+
+      // Finalmente, navega para a página do dashboard
+      navigate('/dashboard');
 
     } catch (err) {
       setErro('Usuário ou senha inválidos. Tente novamente.');
@@ -39,7 +52,7 @@ function Login() {
       <NavbarAut />
       <Container maxWidth="xs">
         <Box display="flex" flexDirection="column" alignItems="center" mt={8}>
-          <Typography variant="h5" component="h1" gutterBottom>
+          <Typography variant="h5" component="h1" gutterBottom >
             Login
           </Typography>
           <form onSubmit={handleLogin} style={{ width: '100%' }}>

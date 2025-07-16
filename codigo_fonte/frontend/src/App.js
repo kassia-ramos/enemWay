@@ -10,6 +10,9 @@ import SISU from './pages/SISU';
 import Prouni from './pages/Prouni';
 import Fies from './pages/Fies';
 import Contato from './pages/Contato';
+import MinhasSimulacoes from './pages/MinhasSimulacoes';
+import Dashboard from './pages/Dashboard';
+
 
 function App() {
   return (
@@ -26,6 +29,10 @@ function App() {
           <Route path="/prouni" element={<Prouni />} />
           <Route path="/fies" element={<Fies />} />
           <Route path="/contato" element={<Contato />} />
+          <Route path="/minhas-simulacoes" element={<MinhasSimulacoes />} />
+          <Route path="/dashboard" element={<Dashboard />} />
+          
+
         </Routes>
       </main>
       <Footer />

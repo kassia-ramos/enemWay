@@ -1,0 +1,70 @@
+/* Estilização do AppBar */
+.MuiAppBar-root {
+  background-color: #21416c !important; /* Azul parecido com navbar da home */
+  color: white !important;
+}
+
+/* Toolbar */
+.MuiToolbar-root {
+  padding-left: 30px !important;
+  padding-right: 30px !important;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Logo à esquerda */
+.MuiAppBar-root .MuiTypography-root {
+  font-weight: 700;
+  font-size: 1.5rem;
+  cursor: pointer;
+  user-select: none;
+  color: white !important;
+  transition: color 0.3s ease;
+}
+
+.MuiTypography-root:hover {
+  color: #b0c4ff;
+}
+
+/* Botão central - Minhas Simulações */
+.MuiButton-root {
+  color: white !important;
+  font-size: 1rem;
+  text-transform: none;
+  border-radius: 4px;
+  padding: 6px 12px;
+  transition: background-color 0.3s ease;
+}
+
+.MuiButton-root:hover {
+  background-color: rgba(255, 255, 255, 0.2) !important;
+}
+
+/* Ícone perfil à direita */
+.MuiIconButton-root {
+  color: white !important;
+  transition: color 0.3s ease;
+}
+
+.MuiIconButton-root:hover {
+  color: #b0c4ff !important;
+}
+
+/* Menu dropdown */
+.MuiPaper-root.MuiMenu-paper {
+  border-radius: 8px;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+/* Itens do Menu */
+.MuiMenuItem-root {
+  font-size: 1rem;
+  color: #333;
+  transition: background-color 0.2s ease;
+}
+
+.MuiMenuItem-root:hover {
+  background-color: #f1f1f1;
+  cursor: pointer;
+}

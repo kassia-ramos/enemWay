@@ -1,7 +1,7 @@
 from rest_framework import serializers
 from .models import Usuario  
 from rest_framework_simplejwt.serializers import TokenObtainPairSerializer
-
+from .models import Simulacao
 
 class UsuarioSerializer(serializers.ModelSerializer):
     password = serializers.CharField(write_only=True)
@@ -18,3 +18,9 @@ class UsuarioSerializer(serializers.ModelSerializer):
         user.set_password(validated_data['password'])
         user.save()
         return user
+    
+class SimulacaoSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Simulacao
+        fields = '__all__'
+        read_only_fields = ['usuario', 'data_criacao']
