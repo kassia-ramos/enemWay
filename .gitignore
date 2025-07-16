@@ -1,16 +1,25 @@
-# Ignorar arquivos e pastas do Python/Django
+# Python / Django
 *.pyc
 __pycache__/
 db.sqlite3
+*.log
+*.pot
 
-# Ignorar arquivos do ambiente virtual
+# Migrações cache
+**/migrations/__pycache__/
+**/migrations/*.py[cod]
+
+# Ambiente virtual
 venv/
+
+# Configurações locais
 .env
 
-# Ignorar arquivos do Node.js/React
-node_modules/
-build/
+# Editor temporários
+*.swp
+*.swo
 
-# Ignorar arquivos do sistema operacional
+# Sistema operacional
 .DS_Store
 Thumbs.db
+

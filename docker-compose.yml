@@ -1,0 +1,19 @@
+services:
+  backend:
+    build:
+      context: ./codigo_fonte/backend
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./codigo_fonte/backend:/app  # mantém volume para refletir alterações locais
+    command: python manage.py runserver 0.0.0.0:8000
+
+  frontend:
+    build:
+      context: ./codigo_fonte/frontend
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    command: serve -s build -l 3000
+
