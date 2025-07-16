@@ -1,15 +1,7 @@
-from django.shortcuts import render
-from rest_framework import viewsets, permissions
-from .models import Usuario, Simulacao
-from .serializers import UsuarioSerializer, SimulacaoSerializer
+from rest_framework import generics
+from .models import Usuario
+from .serializers import UsuarioSerializer
 
-class UsuarioViewSet(viewsets.ReadOnlyModelViewSet):
+class UserCreateView(generics.CreateAPIView):
     queryset = Usuario.objects.all()
     serializer_class = UsuarioSerializer
-    permission_classes = [permissions.IsAuthenticated]
-
-class SimulacaoViewSet(viewsets.ModelViewSet):
-    queryset = Simulacao.objects.all()
-    serializer_class = SimulacaoSerializer
-    permission_classes = [permissions.IsAuthenticated]
-
